@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>오늘의 TODO</title>
+    <link rel="stylesheet" href="/css/index.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>오늘의 TODO</h1>
+      <p class="subtitle">
+        오늘 학습할 TODO를 작성하고, 학습 목표를 달성하세요.
+      </p>
+
+      <div class="button-group">
+        <button class="btn btn-signup" id="signupBtn">회원가입</button>
+        <button class="btn btn-login" id="loginBtn">로그인</button>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $("#signupBtn").click(function () {
+          alert("회원가입 페이지로 이동합니다.");
+        });
+
+        $("#loginBtn").click(function () {
+          alert("로그인 페이지로 이동합니다.");
+        });
+      });
+    </script>
+  </body>
+</html>
