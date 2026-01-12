@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>오늘의 TODO</title>
+    <link rel="stylesheet" href="/css/todo.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h2>오늘의 TODO</h2>
+
+      <div class="summary">
+        <div class="card">
+          <p>총 학습 시간</p>
+          <h3 id="totalTime">00:00:00</h3>
+        </div>
+        <div class="card">
+          <p>완료한 TODO 수</p>
+          <h3 id="doneCount">0</h3>
+        </div>
+      </div>
+
+      <ul class="todo-list">
+        <li class="todo">
+          <button class="play-btn">▶</button>
+          <input type="checkbox" class="todo-check" />
+          <div class="todo-text">
+            <div class="title">일정 1</div>
+            <div class="goal">알고리즘 문제 5문제 풀기</div>
+          </div>
+          <span class="time">00:00:00</span>
+          <button class="setting-btn">⋮</button>
+
+          <!-- 설정 패널 -->
+          <div class="setting-panel">
+            <div class="section priority">
+              <button data-level="high">우선순위 높음</button>
+              <button data-level="middle">우선순위 보통</button>
+              <button data-level="low">우선순위 낮음</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <button class="add-btn">＋ TODO 추가</button>
+    </div>
+
+    <!-- TODO 추가 모달 -->
+    <div class="modal hidden" id="todoModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>TODO</h2>
+          <div class="header-buttons">
+            <button id="cancelBtn">취소</button>
+            <button id="confirmBtn">완료</button>
+          </div>
+        </div>
+
+        <div class="modal-body">
+          <input type="text" id="todoTitle" placeholder="TODO" />
+          <input type="text" id="todoGoal" placeholder="TODO 목표" />
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/todo.js"></script>
+  </body>
+</html>

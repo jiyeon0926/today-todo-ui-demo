@@ -1,0 +1,254 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Malgun Gothic",
+    sans-serif;
+  background: #f9fafb;
+}
+
+.container {
+  width: 900px;
+  margin: 40px auto;
+}
+
+.summary {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.todo {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.todo.high {
+  border: 2px solid #ef4444;
+}
+
+.todo.middle {
+  border: 2px solid #3b82f6;
+}
+
+.todo.low {
+  border: 2px solid #fcd34d;
+}
+
+.todo-check {
+  cursor: pointer;
+  accent-color: #111;
+}
+
+.todo.done {
+  opacity: 0.6;
+}
+
+.play-btn {
+  border: none;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.todo.done .play-btn {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.todo-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.goal {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.time {
+  font-weight: bold;
+}
+
+.setting-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.setting-panel {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  width: 140px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+  padding: 6px;
+  z-index: 10;
+}
+
+.setting-panel.show {
+  display: block;
+}
+
+.setting-panel button {
+  width: 100%;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.setting-panel button[data-level="high"]:hover {
+  background: #ef4444;
+}
+
+.setting-panel button[data-level="middle"]:hover {
+  background: #3b82f6;
+}
+
+.setting-panel button[data-level="low"]:hover {
+  background: #fcd34d;
+}
+
+.setting-panel .section.priority button {
+  position: relative;
+}
+
+.setting-panel .section.priority button:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: 0;
+  height: 1px;
+  background: #d1d5db;
+}
+
+.add-btn {
+  background: #ffffff;
+  border: 1px solid #909090;
+  margin-top: 20px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background-color: #fafafa;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.add-btn:active {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #fff;
+  width: 520px;
+  border-radius: 16px;
+  padding: 24px 28px 28px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  flex: 1;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.header-buttons button {
+  padding: 6px 12px;
+  font-size: 13px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#cancelBtn {
+  background: #fff;
+  border: 1px solid #ccc;
+}
+
+#confirmBtn {
+  background: #222;
+  color: #fff;
+  border: none;
+}
+
+.modal-body {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.modal-body input {
+  padding: 14px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
