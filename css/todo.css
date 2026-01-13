@@ -57,10 +57,6 @@ body {
   accent-color: #111;
 }
 
-.todo.done {
-  opacity: 0.6;
-}
-
 .play-btn {
   border: none;
   background: rgba(255, 255, 255, 0.3);
@@ -95,6 +91,10 @@ body {
 
 .time {
   font-weight: bold;
+}
+
+.todo.done > :not(.setting-panel) {
+  opacity: 0.6;
 }
 
 .setting-btn {
