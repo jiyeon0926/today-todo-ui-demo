@@ -1,6 +1,3 @@
-let timer = null;
-let currentTodo = null;
-
 function formatTime(sec) {
   const h = String(Math.floor(sec / 3600)).padStart(2, "0");
   const m = String(Math.floor((sec % 3600) / 60)).padStart(2, "0");
@@ -31,10 +28,14 @@ function updateDoneCount() {
 }
 
 function closeModal() {
-  $("#todoModal").addClass("hidden");
-  $("#todoTitle").val("");
-  $("#todoGoal").val("");
+  $(".modal").addClass("hidden");
+
+  $("#addTodoTitle").val("");
+  $("#addTodoGoal").val("");
 }
+
+let timer = null;
+let currentTodo = null;
 
 /* ================= 타이머 ================= */
 $(document).on("click", ".play-btn", function () {
@@ -102,7 +103,7 @@ $(document).on("click", ".setting-btn", function (e) {
   if (!isOpen) panel.addClass("show");
 });
 
-$(document).on("click", ".setting-panel button", function () {
+$(document).on("click", ".setting-panel button[data-level]", function () {
   const level = $(this).data("level");
   const todo = $(this).closest(".todo");
 
@@ -112,26 +113,25 @@ $(document).on("click", ".setting-panel button", function () {
   $(this).closest(".setting-panel").removeClass("show");
 });
 
-/* ================= 모달 ================= */
+/* ================= TODO 추가 모달 ================= */
 $(".add-btn").on("click", function () {
-  $("#todoModal").removeClass("hidden");
+  $("#addTodoModal").removeClass("hidden");
 });
 
-$("#cancelBtn").on("click", closeModal);
+$("#addCancelBtn").on("click", closeModal);
 
-/* ================= TODO 추가 ================= */
-$("#confirmBtn").on("click", function () {
-  const title = $("#todoTitle").val().trim();
-  const goal = $("#todoGoal").val().trim();
+$("#addConfirmBtn").on("click", function () {
+  const title = $("#addTodoTitle").val().trim();
+  const goal = $("#addTodoGoal").val().trim();
 
   if (!title) {
-    alert("TODO를 작성하세요");
+    alert("TODO를 작성하세요.");
 
     return;
   }
 
   const todoHtml = `
-    <li class="todo">
+    <li class="todo low">
       <button class="play-btn">▶</button>
       <input type="checkbox" class="todo-check" />
       <div class="todo-text">
@@ -143,6 +143,7 @@ $("#confirmBtn").on("click", function () {
 
       <div class="setting-panel">
         <div class="section priority">
+          <button class="edit-btn">TODO 수정</button>
           <button data-level="high">우선순위 높음</button>
           <button data-level="middle">우선순위 보통</button>
           <button data-level="low">우선순위 낮음</button>
@@ -153,7 +154,43 @@ $("#confirmBtn").on("click", function () {
 
   $(".todo-list").append(todoHtml);
 
-  updateTotalTime();
-  updateDoneCount();
   closeModal();
+});
+
+/* ================= TODO 수정 ================= */
+let currentEditTodo = null;
+
+$(".todo-list").on("click", ".edit-btn", function () {
+  currentEditTodo = $(this).closest(".todo");
+
+  const title = currentEditTodo.find(".title").text();
+  const goal = currentEditTodo.find(".goal").text();
+
+  $("#editTodoTitle").val(title);
+  $("#editTodoGoal").val(goal);
+
+  $("#editTodoModal").removeClass("hidden");
+});
+
+$("#editCancelBtn").on("click", closeModal);
+
+$("#editConfirmBtn").on("click", function () {
+  if (!currentEditTodo) return;
+
+  const title = $("#editTodoTitle").val().trim();
+  const goal = $("#editTodoGoal").val().trim();
+
+  if (!title) {
+    alert("TODO를 작성하세요.");
+
+    return;
+  }
+
+  currentEditTodo.find(".title").text(title);
+  currentEditTodo.find(".goal").text(goal);
+
+  closeModal();
+  currentEditTodo = null;
+
+  $(".setting-panel").removeClass("show");
 });

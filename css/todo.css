@@ -41,15 +41,15 @@ body {
 }
 
 .todo.high {
-  border: 2px solid #ef4444;
+  border-left: 4px solid #ef4444;
 }
 
 .todo.middle {
-  border: 2px solid #3b82f6;
+  border-left: 4px solid #3b82f6;
 }
 
 .todo.low {
-  border: 2px solid #fcd34d;
+  border-left: 4px solid #fcd34d;
 }
 
 .todo-check {
@@ -228,12 +228,14 @@ body {
   cursor: pointer;
 }
 
-#cancelBtn {
+#addCancelBtn,
+#editCancelBtn {
   background: #fff;
   border: 1px solid #ccc;
 }
 
-#confirmBtn {
+#addConfirmBtn,
+#editConfirmBtn {
   background: #222;
   color: #fff;
   border: none;

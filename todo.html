@@ -22,45 +22,41 @@
         </div>
       </div>
 
-      <ul class="todo-list">
-        <li class="todo">
-          <button class="play-btn">▶</button>
-          <input type="checkbox" class="todo-check" />
-          <div class="todo-text">
-            <div class="title">일정 1</div>
-            <div class="goal">알고리즘 문제 5문제 풀기</div>
-          </div>
-          <span class="time">00:00:00</span>
-          <button class="setting-btn">⋮</button>
-
-          <!-- 설정 패널 -->
-          <div class="setting-panel">
-            <div class="section priority">
-              <button data-level="high">우선순위 높음</button>
-              <button data-level="middle">우선순위 보통</button>
-              <button data-level="low">우선순위 낮음</button>
-            </div>
-          </div>
-        </li>
-      </ul>
+      <ul class="todo-list"></ul>
 
       <button class="add-btn">＋ TODO 추가</button>
     </div>
 
-    <!-- TODO 추가 모달 -->
-    <div class="modal hidden" id="todoModal">
+    <div class="modal hidden" id="addTodoModal">
       <div class="modal-content">
         <div class="modal-header">
-          <h2>TODO</h2>
+          <h2>추가</h2>
           <div class="header-buttons">
-            <button id="cancelBtn">취소</button>
-            <button id="confirmBtn">완료</button>
+            <button id="addCancelBtn">취소</button>
+            <button id="addConfirmBtn">완료</button>
           </div>
         </div>
 
         <div class="modal-body">
-          <input type="text" id="todoTitle" placeholder="TODO" />
-          <input type="text" id="todoGoal" placeholder="TODO 목표" />
+          <input type="text" id="addTodoTitle" placeholder="TODO" />
+          <input type="text" id="addTodoGoal" placeholder="TODO 목표" />
+        </div>
+      </div>
+    </div>
+
+    <div class="modal hidden" id="editTodoModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>수정</h2>
+          <div class="header-buttons">
+            <button id="editCancelBtn">취소</button>
+            <button id="editConfirmBtn">완료</button>
+          </div>
+        </div>
+
+        <div class="modal-body">
+          <input type="text" id="editTodoTitle" placeholder="TODO" />
+          <input type="text" id="editTodoGoal" placeholder="TODO 목표" />
         </div>
       </div>
     </div>
