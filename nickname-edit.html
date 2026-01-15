@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>닉네임 변경</title>
+    <link rel="stylesheet" href="/css/nickname-edit.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top-bar">
+        <h2>오늘의 TODO</h2>
+        <div class="nav-links">
+          <a href="#">마이페이지</a>
+          <a href="#">학습 기록</a>
+          <a href="#">스터디</a>
+          <a href="#">순위</a>
+          <a href="#">로그아웃</a>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="left-section">
+          <h1>닉네임 변경</h1>
+        </div>
+
+        <div class="right-section">
+          <form id="nicknameForm">
+            <div class="form-group">
+              <label for="nickname">닉네임</label>
+              <input type="text" id="nickname" />
+            </div>
+
+            <div class="button-group">
+              <button type="button" class="btn btn-cancel" id="cancelBtn">
+                취소
+              </button>
+              <button type="submit" class="btn btn-submit" id="submitBtn">
+                완료
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $("#cancelBtn").click(function () {
+          window.location.href = "todo.html";
+        });
+
+        $("#nicknameForm").submit(function (e) {
+          e.preventDefault();
+
+          const nickname = $("#nickname").val().trim();
+
+          if (!nickname) {
+            alert("닉네임 항목을 입력해주세요.");
+
+            return;
+          }
+
+          window.location.href = "mypage.html";
+        });
+      });
+    </script>
+  </body>
+</html>

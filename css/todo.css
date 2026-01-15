@@ -8,14 +8,14 @@ body {
 .container {
   width: 900px;
   margin: 0 auto;
-  padding-top: 20px;
+  padding-top: 5px;
 }
 
 .top-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0 15px;
+  padding: 10px 0 5px;
   border-bottom: 1px solid #e5e7eb;
   margin-bottom: 40px;
 }
