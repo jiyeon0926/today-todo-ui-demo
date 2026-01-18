@@ -1,6 +1,6 @@
 body {
   font-family: "Tilt Neon", sans-serif;
-  background: #f9fafb;
+  background: #fff;
   margin: 0;
   padding: 0;
 }
@@ -51,7 +51,7 @@ body {
   border-radius: 8px;
   padding: 20px;
   flex: 1;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 .todo-list {
@@ -61,7 +61,7 @@ body {
 
 .todo {
   background: #ffffff;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #dadce0;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -141,7 +141,7 @@ body {
   top: 100%;
   width: 140px;
   background: #fff;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #dadce0;
   border-radius: 8px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
   padding: 6px;
