@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스터디 생성</title>
+    <link rel="stylesheet" href="/css/study-create.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top-bar">
+        <h2>오늘의 TODO</h2>
+        <div class="nav-links">
+          <a href="#">마이페이지</a>
+          <a href="#">학습 기록</a>
+          <a href="#">스터디</a>
+          <a href="#">순위</a>
+          <a href="#">로그아웃</a>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="left-section">
+          <h1>스터디 생성</h1>
+        </div>
+
+        <div class="right-section">
+          <form id="studyCreateForm">
+            <div class="form-group">
+              <label for="name">이름</label>
+              <input type="text" id="name" maxlength="20" required />
+            </div>
+            <div class="form-group">
+              <label for="description">설명</label>
+              <textarea
+                name="dscription"
+                id="dscription"
+                rows="20"
+                maxlength="200"
+                placeholder="200자 이내"
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="maxMemberCount">인원 수</label>
+              <input
+                type="number"
+                id="maxMemberCount"
+                min="1"
+                max="30"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="completionRate">TODO 완료율</label>
+              <select id="completionRate" name="completionRate">
+                <option value="0">0%</option>
+                <option value="25">25%</option>
+                <option value="50">50%</option>
+                <option value="75">75%</option>
+                <option value="100">100%</option>
+              </select>
+            </div>
+
+            <div class="button-group">
+              <button type="button" class="btn btn-cancel" id="cancelBtn">
+                취소
+              </button>
+              <button type="submit" class="btn btn-submit" id="submitBtn">
+                완료
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $("#cancelBtn").click(function () {
+          window.location.href = "study.html";
+        });
+
+        $("#studyCreateForm").submit(function (e) {
+          e.preventDefault();
+
+          window.location.href = "study.html";
+        });
+      });
+    </script>
+  </body>
+</html>
