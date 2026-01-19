@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>순위</title>
+    <link rel="stylesheet" href="/css/ranking.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top-bar">
+        <h2>오늘의 TODO</h2>
+        <div class="nav-links">
+          <a href="#">마이페이지</a>
+          <a href="#">학습 기록</a>
+          <a href="#">스터디</a>
+          <a href="#">순위</a>
+          <a href="#">로그아웃</a>
+        </div>
+      </div>
+
+      <div class="ranking">
+        <h1 class="ranking-title">누적 학습 순위</h1>
+
+        <div class="search-wrap">
+          <form id="searchForm" class="search" autocomplete="off">
+            <input id="nicknameInput" type="text" placeholder="닉네임" />
+            <button type="submit" aria-label="검색">🔍</button>
+          </form>
+        </div>
+
+        <div class="panel my-rank" id="myRankBox"></div>
+        <div class="panel ranking-list" id="rankList"></div>
+
+        <div class="pagination" id="pagination"></div>
+      </div>
+    </div>
+
+    <script src="/js/ranking.js"></script>
+  </body>
+</html>

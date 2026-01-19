@@ -1,0 +1,152 @@
+body {
+  font-family: "Tilt Neon", sans-serif;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 5px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0 5px;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 30px;
+}
+
+.top-bar h2 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.ranking {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.ranking-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.search-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d1d5db;
+  border-radius: 20px;
+  padding: 6px 14px;
+  gap: 8px;
+}
+
+.search input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  width: 280px;
+}
+
+.search button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.panel {
+  border: 1px solid #6b7280;
+  border-radius: 2px;
+  margin-bottom: 16px;
+  background: #fff;
+}
+
+.my-rank,
+.ranking-list {
+  padding: 0;
+}
+
+.rank-row,
+.my-rank-right {
+  display: grid;
+  grid-template-columns: 65px 1fr 60px;
+  align-items: center;
+  padding: 14px 18px;
+  font-size: 14px;
+}
+
+.rank-row:not(:last-child) {
+  border-bottom: 1px solid #6b7280;
+}
+
+.col-rank,
+.my-rank-right > :nth-child(1) {
+  text-align: left;
+}
+
+.col-name,
+.my-rank-name {
+  font-weight: 500;
+}
+
+.col-time,
+.my-rank-time {
+  text-align: left;
+  font-variant-numeric: tabular-nums;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin: 30px 0 60px;
+}
+
+.page-btn {
+  min-width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background: #fff;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.page-btn.is-active {
+  background: #111827;
+  color: #fff;
+  border-color: #111827;
+}
+
+.page-ellipsis {
+  padding: 0 6px;
+  color: #6b7280;
+  line-height: 30px;
+}
