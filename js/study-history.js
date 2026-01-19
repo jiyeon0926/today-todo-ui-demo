@@ -1,3 +1,12 @@
+function getTodayKST() {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, "0");
+  const day = String(now.getDate()).padStart(2, "0");
+
+  return `${year}-${month}-${day}`;
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   const calendarEl = document.getElementById("calendar");
   const historyBody = document.getElementById("historyBody");
@@ -30,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   calendar.render();
 
-  const today = new Date().toISOString().split("T")[0];
+  const today = getTodayKST();
 
   setTimeout(() => {
     const todayEl = calendarEl.querySelector(
