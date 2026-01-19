@@ -21,9 +21,11 @@ $(document).ready(function () {
   });
 
   $("#signupForm").submit(function (e) {
+    e.preventDefault();
+
     const nickname = $("#nickname").val().trim();
     const loginId = $("#loginId").val().trim();
-    const password = $("#password").val().trim();
+    const password = $("#password").val();
 
     if (!isValidNickname(nickname)) {
       alert("닉네임은 2~10자, 한글/영문/숫자만 사용할 수 있습니다.");
@@ -44,8 +46,6 @@ $(document).ready(function () {
 
       return;
     }
-
-    e.preventDefault();
 
     alert("회원가입이 완료되었습니다!");
     window.location.href = "login.html";

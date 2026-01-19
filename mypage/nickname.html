@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -29,7 +29,13 @@
           <form id="nicknameForm">
             <div class="form-group">
               <label for="nickname">닉네임</label>
-              <input type="text" id="nickname" />
+              <input
+                type="text"
+                id="nickname"
+                placeholder="2~10자, 한글/영문/숫자만 사용할 수 있습니다."
+                minlength="2"
+                maxlength="10"
+              />
             </div>
 
             <div class="button-group">
@@ -46,6 +52,12 @@
     </div>
 
     <script>
+      const NICKNAME_REGEX = /^[가-힣a-zA-Z0-9]{2,10}$/;
+
+      function isValidNickname(nickname) {
+        return NICKNAME_REGEX.test(nickname);
+      }
+
       $(document).ready(function () {
         $("#cancelBtn").click(function () {
           window.location.href = "mypage.html";
@@ -56,8 +68,8 @@
 
           const nickname = $("#nickname").val().trim();
 
-          if (!nickname) {
-            alert("닉네임 항목을 입력해주세요.");
+          if (!isValidNickname(nickname)) {
+            alert("닉네임은 2~10자, 한글/영문/숫자만 사용할 수 있습니다.");
 
             return;
           }
