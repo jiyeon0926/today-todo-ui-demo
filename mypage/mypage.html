@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>마이페이지</title>
+    <link rel="stylesheet" href="/css/mypage.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- FullCalendar-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top-bar">
+        <h2>오늘의 TODO</h2>
+        <div class="nav-links">
+          <a href="mypage.html">마이페이지</a>
+          <a href="#">학습 기록</a>
+          <a href="#">스터디</a>
+          <a href="#">순위</a>
+          <a href="#">로그아웃</a>
+        </div>
+      </div>
+
+      <div class="profile-row">
+        <div class="profile-info">
+          <div class="nickname">JIYEON</div>
+          <div class="total-study-time">
+            누적 학습 시간 <br />
+            5 : 30 : 00
+          </div>
+        </div>
+
+        <div class="profile-actions">
+          <button class="btn" id="nicknameBtn">닉네임 변경</button>
+          <button class="btn" id="passwordBtn">비밀번호 변경</button>
+          <button class="btn danger" id="deleteAccountBtn">회원탈퇴</button>
+        </div>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat-card">
+          <div class="stat-label">완료율</div>
+          <div class="stat-value">80%</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-label">전체 TODO 수</div>
+          <div class="stat-value">50</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-label">완료 TODO 수</div>
+          <div class="stat-value">40</div>
+        </div>
+      </div>
+
+      <h3 class="stamp-title">학습 스탬프 (2)</h3>
+      <div id="calendar"></div>
+    </div>
+
+    <script src="/js/mypage.js"></script>
+  </body>
+</html>
