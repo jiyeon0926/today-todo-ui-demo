@@ -29,7 +29,13 @@
           <form id="studyCreateForm">
             <div class="form-group">
               <label for="name">이름</label>
-              <input type="text" id="name" maxlength="20" required />
+              <input
+                type="text"
+                id="name"
+                placeholder="스터디 그룹명"
+                maxlength="20"
+                required
+              />
             </div>
             <div class="form-group">
               <label for="description">설명</label>
@@ -38,7 +44,7 @@
                 id="description"
                 rows="20"
                 maxlength="200"
-                placeholder="200자 이내"
+                placeholder="스터디에 대한 간단한 설명을 작성하세요. (200자 이내)"
               ></textarea>
             </div>
             <div class="form-group">
@@ -48,6 +54,7 @@
                 id="maxMemberCount"
                 min="1"
                 max="30"
+                value="1"
                 required
               />
             </div>
