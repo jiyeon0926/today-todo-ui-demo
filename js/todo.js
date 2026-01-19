@@ -122,7 +122,6 @@ $("#addCancelBtn").on("click", closeModal);
 
 $("#addConfirmBtn").on("click", function () {
   const title = $("#addTodoTitle").val().trim();
-  const goal = $("#addTodoGoal").val().trim();
 
   if (!title) {
     alert("TODO를 작성하세요.");
@@ -159,39 +158,13 @@ $("#addConfirmBtn").on("click", function () {
 });
 
 /* ================= TODO 수정 ================= */
-let currentEditTodo = null;
-
 $(".todo-list").on("click", ".edit-btn", function () {
-  currentEditTodo = $(this).closest(".todo");
-
-  const title = currentEditTodo.find(".title").text();
-  const goal = currentEditTodo.find(".goal").text();
-
-  $("#editTodoTitle").val(title);
-  $("#editTodoGoal").val(goal);
-
   $("#editTodoModal").removeClass("hidden");
 });
 
 $("#editCancelBtn").on("click", closeModal);
 
 $("#editConfirmBtn").on("click", function () {
-  if (!currentEditTodo) return;
-
-  const title = $("#editTodoTitle").val().trim();
-  const goal = $("#editTodoGoal").val().trim();
-
-  if (!title) {
-    alert("TODO를 작성하세요.");
-
-    return;
-  }
-
-  currentEditTodo.find(".title").text(title);
-  currentEditTodo.find(".goal").text(goal);
-
   closeModal();
-  currentEditTodo = null;
-
   $(".setting-panel").removeClass("show");
 });
