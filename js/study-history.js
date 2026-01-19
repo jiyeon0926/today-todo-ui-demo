@@ -4,6 +4,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let selectedDayEl = null;
 
+  const HARDCODED_DATA = {
+    studyDate: "2026-01-20",
+    totalStudyTime: "5:30:00",
+    doneTodoCount: 2,
+    startTime: "10:35",
+    endTime: "20:55",
+    todos: [
+      {
+        title: "우선순위가 높은 일정 1",
+        duration: "2:00:00",
+        is_done: true,
+        priority: "HIGH",
+      },
+    ],
+  };
+
   const calendar = new FullCalendar.Calendar(calendarEl, {
     initialView: "dayGridMonth",
     height: "auto",
@@ -14,6 +30,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   calendar.render();
 
+  const today = new Date().toISOString().split("T")[0];
+
+  setTimeout(() => {
+    const todayEl = calendarEl.querySelector(
+      `.fc-daygrid-day[data-date="${today}"]`,
+    );
+    renderDay(today, todayEl);
+  }, 0);
+
   function renderDay(dateStr, dayEl) {
     if (selectedDayEl) selectedDayEl.classList.remove("selected-day");
     if (dayEl) {
@@ -21,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
       selectedDayEl.classList.add("selected-day");
     }
 
-    const data = null;
+    const data = HARDCODED_DATA;
 
     if (!data || data.studyDate !== dateStr) {
       historyBody.innerHTML = `<p class="history-empty">해당 날짜의 학습 기록이 없습니다.</p>`;
