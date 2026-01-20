@@ -178,11 +178,11 @@ body {
   background: #fcd34d;
 }
 
-.setting-panel .section.priority button {
+.setting-panel .panel.section button {
   position: relative;
 }
 
-.setting-panel .section.priority button:not(:last-child)::after {
+.setting-panel .panel.section button:not(:last-child)::after {
   content: "";
   position: absolute;
   left: 8px;

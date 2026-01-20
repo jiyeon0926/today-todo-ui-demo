@@ -142,7 +142,7 @@ $("#addConfirmBtn").on("click", function () {
       <button class="setting-btn">⋮</button>
 
       <div class="setting-panel">
-        <div class="section priority">
+        <div class="panel section">
           <button class="edit-btn">TODO 수정</button>
           <button class="delete-btn">TODO 삭제</button>
           <button data-level="high">우선순위 높음</button>
