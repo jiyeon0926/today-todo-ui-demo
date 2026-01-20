@@ -122,6 +122,7 @@ $("#addCancelBtn").on("click", closeModal);
 
 $("#addConfirmBtn").on("click", function () {
   const title = $("#addTodoTitle").val().trim();
+  const goal = $("#addTodoGoal").val().trim();
 
   if (!title) {
     alert("TODO를 작성하세요.");
