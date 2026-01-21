@@ -1,0 +1,184 @@
+body {
+  font-family: "Tilt Neon", sans-serif;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 5px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0 5px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.top-bar h2 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.study-intro {
+  width: 100%;
+  background: #6a6a6a;
+  padding: 46px 0 52px;
+}
+
+.study-intro-inner {
+  width: 90%;
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+}
+
+.study-title {
+  margin: 0 0 14px;
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.study-desc {
+  margin: 0 0 22px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.study-actions {
+  display: inline-flex;
+  gap: 12px;
+}
+
+.btn {
+  height: 34px;
+  min-width: 140px;
+  padding: 0 18px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-search {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.btn-create {
+  background: #111;
+  color: #fff;
+  border: 1px solid #111;
+}
+
+.study-main {
+  width: 90%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 26px 0 40px;
+}
+
+.study-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #c3c4c6;
+}
+
+.study-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 6px;
+  border-bottom: 1px solid #c3c4c6;
+}
+
+.study-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.study-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #111;
+}
+
+.study-owner {
+  font-size: 11px;
+}
+
+.setting-btn {
+  width: 34px;
+  height: 34px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 8px;
+  position: relative;
+}
+
+.setting-panel {
+  display: none;
+  position: absolute;
+  right: 0;
+  width: 140px;
+  background: #fff;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+  padding: 6px;
+  z-index: 10;
+}
+
+.setting-panel.show {
+  display: block;
+}
+
+.setting-panel button {
+  width: 100%;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.setting-panel .section.priority button:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: 0;
+  height: 1px;
+  background: #d1d5db;
+}

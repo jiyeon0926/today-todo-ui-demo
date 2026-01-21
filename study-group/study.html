@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스터디</title>
+    <link rel="stylesheet" href="/css/study.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top-bar">
+        <h2>오늘의 TODO</h2>
+        <div class="nav-links">
+          <a href="#">마이페이지</a>
+          <a href="#">학습 기록</a>
+          <a href="#">스터디</a>
+          <a href="#">순위</a>
+          <a href="#">로그아웃</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="study-intro">
+      <div class="study-intro-inner">
+        <h1 class="study-title">스터디</h1>
+        <p class="study-desc">
+          스터디를 통해 오늘의 TODO를 공유하고,<br />
+          스터디 멤버들과 학습 현황을 함께 관리할 수 있습니다.
+        </p>
+
+        <div class="study-actions">
+          <button type="button" class="btn btn-search" id="searchBtn">
+            스터디 검색
+          </button>
+          <button type="button" class="btn btn-create" id="createBtn">
+            스터디 생성
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="study-main">
+      <ul class="study-list">
+        <li class="study-item">
+          <div class="study-text">
+            <div class="study-name">영어 스터디 (15 / 30)</div>
+            <div class="study-owner">USER11</div>
+          </div>
+          <button class="setting-btn">⋮</button>
+
+          <div class="setting-panel">
+            <div class="panel section">
+              <button class="get-out-btn">스터디 나가기</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <script src="/js/study.js"></script>
+  </body>
+</html>
