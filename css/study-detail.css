@@ -208,20 +208,16 @@ body {
 }
 
 .todo-modal-close {
-  position: absolute;
-  right: 14px;
-  top: 14px;
-  width: 30px;
-  height: 30px;
-  border: 1px solid #111;
-  background: #fff;
-  border-radius: 8px;
   cursor: pointer;
-  font-size: 14px;
-  line-height: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  border: none;
+  background: none;
+  font-size: 22px;
 }
 
 .todo-modal-close:hover {
