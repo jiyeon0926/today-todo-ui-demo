@@ -138,8 +138,88 @@ body {
   font-size: 13px;
   font-weight: 700;
   color: #111;
+  cursor: pointer;
 }
 
 .study-created-at {
   font-size: 11px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.study-modal {
+  width: 92%;
+  max-width: 480px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 26px 24px 22px;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  border: none;
+  background: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.modal-title {
+  margin: 0 0 6px;
+  font-size: 22px;
+  font-weight: 800;
+  color: #111;
+}
+
+.modal-leader {
+  margin: 0 0 18px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.modal-desc {
+  margin: 0 0 22px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #374151;
+}
+
+.modal-info {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 10px;
+}
+
+.modal-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.modal-info-item .label {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.modal-info-item .value {
+  font-size: 15px;
+  font-weight: 500;
 }

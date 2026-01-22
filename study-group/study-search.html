@@ -52,6 +52,30 @@
       </ul>
     </div>
 
+    <div class="modal-overlay hidden" id="studyModalOverlay">
+      <div class="study-modal" role="dialog" aria-modal="true">
+        <button class="modal-close" id="studyModalClose">×</button>
+
+        <h2 class="modal-title" id="mTitle">영어 스터디</h2>
+        <p class="modal-leader" id="mLeader">리더 USER22</p>
+
+        <p class="modal-desc" id="mDesc">
+          개인 TODO 완료율 50% 이상인 신청해주세요.
+        </p>
+
+        <div class="modal-info">
+          <div class="modal-info-item">
+            <span class="label">인원 수</span>
+            <span class="value" id="mMembers">10 / 30</span>
+          </div>
+          <div class="modal-info-item">
+            <span class="label">가입 조건</span>
+            <span class="value" id="mCondition">TODO 완료율 50% 이상</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="/js/study-search.js"></script>
   </body>
 </html>
