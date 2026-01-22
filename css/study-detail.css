@@ -1,0 +1,249 @@
+body {
+  font-family: "Tilt Neon", sans-serif;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 5px;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0 5px;
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 30px;
+}
+
+.top-bar h2 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.study-header {
+  text-align: center;
+  margin: 35px 0 26px;
+}
+
+.study-title {
+  font-size: 34px;
+  font-weight: 900;
+  color: #111;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+}
+
+.study-desc {
+  font-size: 11px;
+  line-height: 1.6;
+  color: #6b7280;
+}
+
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 22px;
+}
+
+.member-card {
+  border: 1px solid #eef2f7;
+  border-radius: 6px;
+  padding: 16px 16px 14px;
+  background: #fff;
+}
+
+.member-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.member-name {
+  font-size: 13px;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 6px;
+}
+
+.member-role {
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.setting-btn {
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 8px;
+  color: #9ca3af;
+}
+
+.setting-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.setting-panel {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin-top: 6px;
+  width: 140px;
+  background: #fff;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+  padding: 6px;
+  z-index: 10;
+}
+
+.setting-panel.show {
+  display: block;
+}
+
+.setting-panel button {
+  position: relative;
+  width: 100%;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.setting-panel .panel.section button:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: 0;
+  height: 1px;
+  background: #d1d5db;
+}
+
+.time-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.time-box,
+.total-box {
+  border: 1px solid #bfc5cc;
+  border-radius: 4px;
+  padding: 10px 12px;
+  background: #fff;
+}
+
+.total-box {
+  margin-top: 12px;
+}
+
+.time-label {
+  font-size: 11px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.time-value {
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 0.3px;
+}
+
+.todo-modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(860px, 92vw);
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #eef2f7;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.16);
+  z-index: 1000;
+  padding: 12px 24px 30px;
+}
+
+.todo-modal-title {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 800;
+  margin: 4px 0 14px;
+  letter-spacing: -0.5px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.todo-modal-close {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #111;
+  background: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todo-modal-close:hover {
+  background: #f3f4f6;
+}
+
+.todo-modal-list {
+  width: min(620px, 100%);
+  margin: 18px auto 0;
+  border: 1px solid;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.todo-modal-item {
+  padding: 16px 18px;
+  font-size: 16px;
+  border-top: 1px solid;
+  background: #fff;
+}
+
+.todo-modal-item:first-child {
+  border-top: none;
+}

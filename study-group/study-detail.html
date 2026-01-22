@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스터디</title>
+    <link rel="stylesheet" href="/css/study-detail.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top-bar">
+        <h2>오늘의 TODO</h2>
+        <div class="nav-links">
+          <a href="#">마이페이지</a>
+          <a href="#">학습 기록</a>
+          <a href="#">스터디</a>
+          <a href="#">순위</a>
+          <a href="#">로그아웃</a>
+        </div>
+      </div>
+
+      <div class="study-header">
+        <div class="study-title">자바 스터디</div>
+        <div class="study-desc">
+          <p>스터디 설명 텍스트</p>
+        </div>
+      </div>
+
+      <div class="member-grid">
+        <div class="member-card">
+          <div class="member-top">
+            <div class="member-name-wrap">
+              <div class="member-name">USER22</div>
+              <div class="member-role">리더</div>
+            </div>
+            <div class="setting-wrap">
+              <button type="button" class="setting-btn">⋮</button>
+
+              <div class="setting-panel">
+                <div class="panel section">
+                  <button class="member-todo-btn">오늘의 TODO 보기</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="time-row">
+            <div class="time-box">
+              <div class="time-label">시작 시간</div>
+              <div class="time-value">10 : 35</div>
+            </div>
+            <div class="time-box">
+              <div class="time-label">종료 시간</div>
+              <div class="time-value">17 : 35</div>
+            </div>
+          </div>
+          <div class="total-box">
+            <div class="time-label">총 학습 시간</div>
+            <div class="time-value">5 : 30 : 00</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="todo-modal" style="display: none">
+        <button type="button" class="todo-modal-close">X</button>
+        <div class="todo-modal-title" id="todoModalUser">USER23</div>
+        <div class="todo-modal-list">
+          <div class="todo-modal-item">우선순위가 높은 일정 1</div>
+          <div class="todo-modal-item">우선순위가 높은 일정 2</div>
+          <div class="todo-modal-item">우선순위가 낮은 일정 3</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/study-detail.js"></script>
+  </body>
+</html>
