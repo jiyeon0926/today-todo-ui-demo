@@ -142,10 +142,18 @@ body {
   position: relative;
 }
 
+.setting-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
 .setting-panel {
   display: none;
   position: absolute;
   right: 0;
+  top: 100%;
+  margin-top: 6px;
   width: 140px;
   background: #fff;
   border: 1px solid #dadce0;
@@ -160,6 +168,7 @@ body {
 }
 
 .setting-panel button {
+  position: relative;
   width: 100%;
   padding: 8px 10px;
   border: none;
@@ -173,7 +182,7 @@ body {
   gap: 6px;
 }
 
-.setting-panel .section.priority button:not(:last-child)::after {
+.setting-panel .panel.section button:not(:last-child)::after {
   content: "";
   position: absolute;
   left: 8px;
