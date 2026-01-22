@@ -37,18 +37,20 @@
 <img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/ef2e3f1f-aaa3-4375-bd34-ef28739d1cb4" />
 
 ### 스터디
-- 메인
-- 생성
-- 수정
-- 검색
-- 가입 신청 목록
-- 내부
-- 멤버의 오늘의 TODO 조회 모달
+- 스터디 메인
+- 스터디 생성
+- 스터디 수정
+- 스터디 검색
+- 스터디 정보 조회 모달
+- 스터디 가입 신청 목록
+- 스터디 내부
+- 스터디 멤버의 오늘의 TODO 조회 모달
 <img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/d1d305e2-74c6-4e21-a941-68862c235d85" />
 <img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/27c4cdf1-8e25-4746-99ee-d11e7e7ad969" />
 <img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/17b2eac4-acad-4c69-9dac-abb645e8da38" />
 <img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/49344060-0562-49f9-a6c3-d5496c539a7e" />
 <img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/517482b9-3168-442c-84a4-85b5def28ccb" />
+<img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/9e6f661c-255f-4e7d-a76a-0fdaa27fa58b" />
 <img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/5a102d6a-8692-4199-a217-f9ed89f18cc3" />
 <img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/307b2cf8-bed1-4ef4-bf07-3dea3b0d62c2" />
-<img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/4a31f1b3-c12a-4f17-b335-91770e61f816" />
+<img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/649eb5a2-88e6-43c6-bd39-cf736d29f4a8" />
