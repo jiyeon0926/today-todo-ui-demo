@@ -36,6 +36,10 @@
 <img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/282ebfee-9f06-4d52-921c-a3f2bc965575" />
 <img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/ef2e3f1f-aaa3-4375-bd34-ef28739d1cb4" />
 
+### 순위
+<img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/300f9782-09c2-4bf4-b8b5-3d2424e52a12" />
+<img width="1920" height="1008" alt="image" src="https://github.com/user-attachments/assets/ef03b0ab-1dd2-40a3-91e7-e8d6e18c2f43" />
+
 ### 스터디
 - 스터디 메인
 - 스터디 생성
